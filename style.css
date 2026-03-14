@@ -545,6 +545,10 @@ PRICING
     padding-top: 10px;
 }
 
+.plan__title--wrapper, .plan__features--wrapper, .btn__wrapper{
+    background-color: #fff;
+}
+
 .plan__features li{
     padding: 8px;
     color: #7c8ba1
@@ -644,6 +648,29 @@ PRICING
     color: black;
 }
 
+.pricing {
+  position: relative;
+  isolation: isolate;
+}
+
+.pricing::before {
+    content: "";
+    position: absolute;
+
+    left: -60px;
+    bottom: -40px;
+
+    width: 180px;
+    height: 120px;
+
+    background: rgba(245, 101, 101, 0.18);
+
+    border-radius: 90% 10% 80% 45% / 25% 85% 15% 75%;
+
+    z-index: -1;
+    pointer-events: none;
+}
+
 /* 
 
 TESTIMONIALS
@@ -741,12 +768,229 @@ TESTIMONIALS
     justify-content: center;
     display: flex;
     align-items: center;
-    font-size: 20px;
     background-color: #edf2f7;
-    color:#6415ff;
     border: none;
+    padding: 0 8px;
+}
+
+.testimonials__btn i{
+    color: #6415ff;
+}
+
+/* 
+
+SQUARE
+
+*/
+
+.square{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.square__title{
+    width: 50%;
+    margin-left: 32px;
+    color: white;
+    letter-spacing: 0.025em;
+    line-height: 1.5;
+    font-size: 28px;
+}
+
+.square__btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 24px;
+    font-size: 18px;
+    margin-left: 16px;
+}
+
+.square__btn--orange{
+    background-color:rgba(255, 68, 0, 0.856);
+    padding: 20px 38px;
+    font-weight: 800;
+}
+
+.square__btn--orange:hover{
+    background-color:rgba(255, 68, 0, 1);
+}
+
+.square__btn--purple{
+    padding: 20px 38px;
+    border: 1px solid rgba(255, 255, 255, 0.603);
+    font-weight: 800;
+}
+
+.square__btn--purple:hover{
+    background-color:white;
+    color: #6415ff;
+}
+
+.cta {
+  position: relative;
+  background: #6415ff;        
+  border-radius: 12px;
+  overflow: hidden;           
+  padding: 80px 100px;         
+}
+
+/* bottom-left blob */
+.cta::before {
+  content: "";
+  position: absolute;
+  left: -80px;
+  bottom: -120px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(40, 0, 120, 0.22);
+}
+
+/* top-right blob */
+.cta::after {
+  content: "";
+  position: absolute;
+  right: -50px;
+  top: -220px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(40, 0, 120, 0.22);
+}
+
+.cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* 
+
+FOOTER
+
+*/
+
+#footer .container, #footer .row{
+    max-width: none;
+    max-height: none;
+    padding: 0;
+}
+
+.footer{
+    padding: 75px 32px;
+    background-color: #6415ff;
+    margin-bottom: -32px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.footer__links--wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px;
+    flex-wrap: wrap;
+}
+
+.footer__links--title{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.footer__links{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer__link a{
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer__bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 24px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    width: 40px;
+    height: 40px;
+}
+
+.logo__title{
+    font-size: 24px;
     font-weight: 900;
-    padding: 0 6px;
+    margin-left: 12px;
+    color: #fff;
+}
+
+.copyright{
+    color: #fff;
+    font-size: 14px;
+}
+
+.footer__icons{
+    display: flex;
+    gap: 16px;
+    color: #fff;
+}
+
+.footer__icons i{
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer__cta {
+  position: relative;
+  background: #6415ff;        
+  overflow: hidden;
+}
+
+/* bottom-right blob */
+.footer__cta::after {
+  content: "";
+  position: absolute;
+  right: -80px;
+  bottom: -120px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(40, 0, 120, 0.22);
+}
+
+/* top-left blob */
+.footer__cta::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: -100px;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: rgba(40, 0, 120, 0.22);
+}
+
+.footer__cta > * {
+  position: relative;
+  z-index: 1;
 }
 
 /* 
