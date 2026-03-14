@@ -6,6 +6,7 @@
     <title>Treact</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/41cda13e3c.js" crossorigin="anonymous"></script>
+    <script src="./testimonials.js" defer></script>
 </head>
 <body>
     <section class="landing">
@@ -19,16 +20,11 @@
                         <h1 class="nav__logo--title">Treact</h1>
                     </div>
                     <ul class="nav__links">
-                        <li><a href="#" class="nav__link link__hover-effect
-                        link__hover-effect--purple">About</a></li>
-                        <li><a href="#" class="nav__link link__hover-effect
-                        link__hover-effect--purple">Blog</a></li>
-                        <li><a href="#" class="nav__link link__hover-effect
-                        link__hover-effect--purple">Pricing</a></li>
-                        <li><a href="#" class="nav__link link__hover-effect
-                        link__hover-effect--purple">Contact Us</a></li>
-                        <li><a href="#" class="nav__link nav__link--login link__hover-effect
-                        link__hover-effect--purple">Login</a></li>
+                        <li><a href="#features" class="nav__link link__hover-effect link__hover-effect--purple">About</a></li>
+                        <li><a href="" class="nav__link link__hover-effect link__hover-effect--purple">Blog</a></li>
+                        <li><a href="#pricing" class="nav__link link__hover-effect link__hover-effect--purple">Pricing</a></li>
+                        <li><a href="" class="nav__link link__hover-effect link__hover-effect--purple">Contact Us</a></li>
+                        <li><a href="" class="nav__link nav__link--login link__hover-effect link__hover-effect--purple">Login</a></li>
                         <li><a href="#" class="nav__link--button">Sign Up</a></li>
                     </ul>
                 </div>
@@ -49,10 +45,10 @@
                         </div>
                         <figure class="trusted-customers">
                             <p class="trusted-customers__title">OUR TRUSTED CUSTOMERS</p>
-                            <img class="trusted-customers__img" src="./assets/trusted customers.png" alt="">
+                            <img class="trusted-customers__img" src="./assets/trusted-customers.png" alt="">
                         </figure>
                     </div>
-                    <figure class=header__img>
+                    <figure class="header__img">
                         <img src="./assets/header--img.svg" alt="">
                     </figure>
                 </div>
@@ -129,8 +125,8 @@
             <div class="row">
                 <div class="quality-work">
                     <div class="quality-work__description">
-                        <h4 class="quality-work__tag"><span class="purple-text">QUALITY WORK</span></h4>
-                        <h1 class="quality-work__title">Designed & Developed by <span class="purple-text">Professionals.</span></h1>
+                        <h4 class="section__tag"><span class="purple-text">QUALITY WORK</span></h4>
+                        <h1 class="section__title">Designed & Developed by <span class="purple-text">Professionals.</span></h1>
                         <p class="quality-work__para">We create beautifully designed templates built with clean, efficient code. Every component is carefully crafted to deliver reliable performance and a smooth experience on any device.</p>
                         <button class="quality-work__btn">Learn More</button>
                     </div>
@@ -151,8 +147,8 @@
                         <div class="steps__dots"></div>
                     </figure>
                     <div class="steps__description">
-                        <h4 class="steps__tag"><span class="purple-text">STEPS</span></h4>
-                        <h1 class="steps__title">Easy to <span class="purple-text">Get Started.</span></h1>
+                        <h4 class="section__tag"><span class="purple-text">STEPS</span></h4>
+                        <h1 class="section__title">Easy to <span class="purple-text">Get Started.</span></h1>
                         <div class="steps">
                             <div class="step">
                                 <div class="step__number">01</div>
@@ -186,8 +182,8 @@
             <div class="row">
                 <div class="values__wrapper">
                     <div class="values__description">
-                        <h4 class="values__tag"><span class="purple-text">VALUES</span></h4>
-                        <h1 class="values__title">We Always Abide by Our <span class="purple-text">Principles.</span></h1>
+                        <h4 class="section__tag"><span class="purple-text">VALUES</span></h4>
+                        <h1 class="section__title">We Always Abide by Our <span class="purple-text">Principles.</span></h1>
                         <p class="values__para">Our core values guide our actions and decisions, ensuring we deliver the best possible experience for our clients and partners.</p>
                         <div class="values">
                             <div class="value">
@@ -222,8 +218,8 @@
         <div class="container">
             <div class="row">
                 <div class="pricing">
-                    <h4 class="pricing__tag"><span class="purple-text">PRICING</span></h4>
-                    <h1 class="pricing__title">Reasonable & Flexible <span class="purple-text">Plans.</span></h1>
+                    <h4 class="section__tag"><span class="purple-text">PRICING</span></h4>
+                    <h1 class="section__title">Reasonable & Flexible <span class="purple-text">Plans.</span></h1>
                     <p class="pricing__para">Our pricing plans are designed to provide flexibility and value, ensuring you can find the perfect fit for your needs and budget.</p>
                     <div class="plans">
                         <div class="plan plan--individual">
@@ -288,5 +284,46 @@
             </div>
         </div>
     </section>
-</body>
+    <section id="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="testimonial__wrapper">
+                    <figure class="testimonials__img--wrapper">
+                        <img src="./assets/testimonials.svg" class="testimonials__img" alt="">
+                    </figure>
+                    <div class="testimonials">
+                        <h4 class="section__tag">TESTIMONIALS</h4>
+                        <h1 class="section__title">Our Clients <span class="purple-text">Love Us.</span></h1>
+                        <p class="testimonials__para">Don't just take our word for it - see what our satisfied customers have to say about their experience with our templates and services.</p>
+                        <div class="testimonials__reviews" id="testimonials">
+                            <div class="testimonial">
+                                <div class="review__stars">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <h3 class="testimonial__title">Amazing User Experience</h3>
+                                <p class="testimonial__quote">Working with this platform completely changed how quickly our team could build and launch new pages. The templates are thoughtfully designed, the code structure is easy to follow, and customization is straightforward.</p>
+                                <div class="testimonial__bottom">
+                                    <div class="testimonial__profile">
+                                        <img src="./assets/cust-photo-1.jpeg" class="testimonial__profile--img" alt="Charlotte Hale">
+                                    </div>
+                                    <div class="testimonial__details">
+                                        <p class="testimonial__name">Charlotte Hale</p>
+                                        <p class="testimonial__role">Director, Delos Inc. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="testimonials__btns">
+                                <button class="testimonials__btn testimonials__btn--prev" type="button" data-dir="prev" aria-label="prev review">←</button>
+                                <button class="testimonials__btn testimonials__btn--next" type="button" data-dir="next" aria-label="next review">→</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
 </html>
