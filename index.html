@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/41cda13e3c.js" crossorigin="anonymous"></script>
     <script src="./testimonials.js" defer></script>
+    <script src="menu.js"></script>
 </head>
 <body>
     <section class="landing">
@@ -27,9 +28,25 @@
                         <li><a href="" class="nav__link nav__link--login link__hover-effect link__hover-effect--purple">Login</a></li>
                         <li><a href="#" class="nav__link--button">Sign Up</a></li>
                     </ul>
+                    <button class="btn__menu" onclick="openMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
             </nav>
-         </div>
+            <div class="menu">
+                <button class="btn__menu btn__menu--close" onclick="closeMenu()">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="menu__links">
+                    <a href="#about" class="menu__link" onclick="closeMenu()">About</a>
+                    <a href="#blog" class="menu__link" onclick="closeMenu()">Blog</a>
+                    <a href="#pricing" class="menu__link" onclick="closeMenu()">Pricing</a>
+                    <a href="#contact__us" class="menu__link" onclick="closeMenu()">Contact Us</a>
+                    <a href="#login" class="menu__link" onclick="closeMenu()">Login</a>
+                    <button class="btn__menu--sign-up"><a href="#signup" class="menu__link menu__link--primary" onclick="closeMenu()">Sign up</a></button>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="header">
         <div class="container">
@@ -58,9 +75,11 @@
     <section id="features">
         <div class="container">
             <div class="row">
-                <h4 class="features__tag"><span class="purple-text">FEATURES</span></h4>
-                <h1 class="features__title">We Have Amazing <span class="purple-text">Service</span></h1>
-                <p class="features__para">Our platform helps you build modern, responsive websites quickly with flexible components and a clean, customizable structure.</p>
+                <div class="features__wrapper">
+                    <h4 class="section__tag"><span class="purple-text">FEATURES</span></h4>
+                    <h1 class="section__title">We Have Amazing <span class="purple-text">Service</span></h1>
+                    <p class="section__para">Our platform helps you build modern, responsive websites quickly with flexible components and a clean, customizable structure.</p>
+                </div>
                 <div class="services">
                     <div class="service">
                         <div class="service__row">
@@ -127,7 +146,7 @@
                     <div class="quality-work__description">
                         <h4 class="section__tag"><span class="purple-text">QUALITY WORK</span></h4>
                         <h1 class="section__title">Designed & Developed by <span class="purple-text">Professionals.</span></h1>
-                        <p class="quality-work__para">We create beautifully designed templates built with clean, efficient code. Every component is carefully crafted to deliver reliable performance and a smooth experience on any device.</p>
+                        <p class="section__para">We create beautifully designed templates built with clean, efficient code. Every component is carefully crafted to deliver reliable performance and a smooth experience on any device.</p>
                         <button class="quality-work__btn">Learn More</button>
                     </div>
                     <figure class="quality-work__img">
@@ -142,10 +161,11 @@
         <div class="container">
             <div class="row">
                 <div class="steps__wrapper">
-                    <figure class="steps__img--wrapper">
-                        <img src="./assets/steps.png" class="steps__img" alt="">
-                        <div class="steps__dots"></div>
-                    </figure>
+                    <div class="steps__img-col">
+                        <figure class="steps__img--wrapper">
+                            <img src="./assets/steps.png" class="steps__img" alt="">
+                        </figure>
+                    </div>
                     <div class="steps__description">
                         <h4 class="section__tag"><span class="purple-text">STEPS</span></h4>
                         <h1 class="section__title">Easy to <span class="purple-text">Get Started.</span></h1>
@@ -184,7 +204,7 @@
                     <div class="values__description">
                         <h4 class="section__tag"><span class="purple-text">VALUES</span></h4>
                         <h1 class="section__title">We Always Abide by Our <span class="purple-text">Principles.</span></h1>
-                        <p class="values__para">Our core values guide our actions and decisions, ensuring we deliver the best possible experience for our clients and partners.</p>
+                        <p class="section__para">Our core values guide our actions and decisions, ensuring we deliver the best possible experience for our clients and partners.</p>
                         <div class="values">
                             <div class="value">
                                 <div class="value__title--wrapper">
@@ -218,9 +238,11 @@
         <div class="container">
             <div class="row">
                 <div class="pricing">
-                    <h4 class="section__tag"><span class="purple-text">PRICING</span></h4>
-                    <h1 class="section__title">Reasonable & Flexible <span class="purple-text">Plans.</span></h1>
-                    <p class="pricing__para">Our pricing plans are designed to provide flexibility and value, ensuring you can find the perfect fit for your needs and budget.</p>
+                    <div class="pricing__wrapper">
+                        <h4 class="section__tag"><span class="purple-text">PRICING</span></h4>
+                        <h1 class="section__title">Reasonable & Flexible <span class="purple-text">Plans.</span></h1>
+                        <p class="section__para">Our pricing plans are designed to provide flexibility and value, ensuring you can find the perfect fit for your needs and budget.</p>
+                    </div>
                     <div class="plans">
                         <div class="plan plan--individual">
                             <div class="plan__title--wrapper">
@@ -294,7 +316,7 @@
                     <div class="testimonials">
                         <h4 class="section__tag">TESTIMONIALS</h4>
                         <h1 class="section__title">Our Clients <span class="purple-text">Love Us.</span></h1>
-                        <p class="testimonials__para">Don't just take our word for it - see what our satisfied customers have to say about their experience with our templates and services.</p>
+                        <p class="section__para">Don't just take our word for it - see what our satisfied customers have to say about their experience with our templates and services.</p>
                         <div class="testimonials__reviews" id="testimonials">
                             <div class="testimonial">
                                 <div class="review__stars">
@@ -346,46 +368,46 @@
                             <div class="footer__links--main">
                                 <h4 class="footer__links--title">Main</h4>
                                 <ul class="footer__links">
-                                    <li class="footer__link"><a href="#">Blog</a></li>
-                                    <li class="footer__link"><a href="#">FAQs</a></li>
-                                    <li class="footer__link"><a href="#">Support</a></li>
-                                    <li class="footer__link"><a href="#">About Us</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Blog</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">FAQs</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Support</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">About Us</a></li>
                                 </ul>
                             </div>
                             <div class="footer__links--product">
                                 <h4 class="footer__links--title">Product</h4>
                                 <ul class="footer__links">
-                                    <li class="footer__link"><a href="#">Log In</a></li>
-                                    <li class="footer__link"><a href="#">Personal</a></li>
-                                    <li class="footer__link"><a href="#">Business</a></li>
-                                    <li class="footer__link"><a href="#">Team</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Log In</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Personal</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Business</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Team</a></li>
                                 </ul>
                             </div>
                             <div class="footer__links--press">
                                 <h4 class="footer__links--title">Press</h4>
                                 <ul class="footer__links">
-                                    <li class="footer__link"><a href="#">Logos</a></li>
-                                    <li class="footer__link"><a href="#">Events</a></li>
-                                    <li class="footer__link"><a href="#">Stories</a></li>
-                                    <li class="footer__link"><a href="#">Office</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Logos</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Events</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Stories</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Office</a></li>
                                 </ul>
                             </div>
                             <div class="footer__links--team">
                                 <h4 class="footer__links--title">Team</h4>
                                 <ul class="footer__links">
-                                    <li class="footer__link"><a href="#">Career</a></li>
-                                    <li class="footer__link"><a href="#">Founders</a></li>
-                                    <li class="footer__link"><a href="#">Culture</a></li>
-                                    <li class="footer__link"><a href="#">Onboarding</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Career</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Founders</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Culture</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Onboarding</a></li>
                                 </ul>
                             </div>
                             <div class="footer__links--legal">
                                 <h4 class="footer__links--title">Legal</h4>
                                 <ul class="footer__links">
-                                    <li class="footer__link"><a href="#">GDPR</a></li>
-                                    <li class="footer__link"><a href="#">Privacy Policy</a></li>
-                                    <li class="footer__link"><a href="#">Terms of Service</a></li>
-                                    <li class="footer__link"><a href="#">Disclaimer</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">GDPR</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Privacy Policy</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Terms of Service</a></li>
+                                    <li class="footer__link"><a class="link__hover-effect" href="#">Disclaimer</a></li>
                                 </ul>
                             </div>
                         </div>
